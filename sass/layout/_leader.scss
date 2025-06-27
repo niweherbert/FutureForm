@@ -1,0 +1,41 @@
+.leader {
+  padding: 0 2.4rem;
+  max-width: 92rem;
+  display: grid;
+  grid-gap: 4.4rem;
+
+  @media only screen and (min-width: 700px) {
+    padding: 0 5.5rem;
+    grid-gap: 6.4rem;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    grid-gap: 0;
+    grid-auto-flow: column;
+    max-width: 122rem;
+  }
+
+  &__img {
+    width: 100%;
+
+    @media only screen and (min-width: 1200px) {
+      width: 72.9rem;
+    }
+  }
+
+  &__content {
+    text-align: center;
+    display: grid;
+    grid-gap: 1.6rem;
+
+    @media only screen and (min-width: 1200px) {
+      align-self: end;
+      padding: 9.6rem 0 0 9.6rem;
+      width: 143%;
+      margin-left: -16rem;
+      background-color: #fff;
+      text-align: left;
+      grid-gap: 2.6rem;
+    }
+  }
+}

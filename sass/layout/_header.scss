@@ -1,0 +1,86 @@
+.header {
+  background-image: url("../images/mobile/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 4rem 2.4rem;
+  height: 65rem;
+  width: 100%;
+  background-position: center;
+  position: relative;
+  display: grid;
+  justify-items: center;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+
+  @media only screen and (max-width: 374px) {
+    background-position: center top;
+    height: 55rem;
+  }
+
+  @media only screen and (min-width: 750px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url("../images/desktop/image-hero.jpg");
+    background-size: cover;
+    padding: 6.4rem 5.5rem;
+    align-items: start;
+  }
+
+  &__content {
+    display: grid;
+    align-content: center;
+    width: 100%;
+
+    @media only screen and (min-width: 750px) {
+      margin-top: 5rem;
+      max-width: 111rem;
+    }
+  }
+}
+
+.masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 4rem 2.4rem;
+  transition: all 0.3s;
+  z-index: 100;
+
+  @media only screen and (min-width: 750px) {
+    position: relative;
+    max-width: 111rem;
+    padding: 0;
+  }
+
+  &--scroll {
+    background-color: black;
+    padding: 3rem 2.4rem;
+    transition: all 0.3s;
+
+    @media only screen and (min-width: 750px) {
+      background-color: unset;
+      padding: unset;
+      transition: unset;
+    }
+  }
+
+  &__logo-wrapper {
+    width: clamp(144px, 30%, 192px);
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo-img {
+    width: 100%;
+    position: relative;
+    z-index: 20;
+  }
+}

@@ -1,0 +1,34 @@
+.btn {
+  &--menu {
+    position: relative;
+    z-index: 20;
+
+    @media only screen and (min-width: 750px) {
+      display: none;
+    }
+  }
+
+  &--square {
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1.5px solid $color-black;
+    color: $color-black;
+    padding: 1rem 3.8rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    transition: all 0.8s;
+    justify-self: center;
+
+    &:hover,
+    &:focus {
+      background-color: $color-black;
+      color: $color-white;
+    }
+
+    @media only screen and (min-width: 750px) {
+      grid-area: button;
+      justify-self: end;
+    }
+  }
+}

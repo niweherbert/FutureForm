@@ -1,0 +1,153 @@
+// Cards in "Our Creations" Section
+.card {
+  width: 100%;
+  height: 12rem;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  justify-content: start;
+  align-content: end;
+  padding: 0 0 2rem 2rem;
+
+  @media only screen and (min-width: 750px) {
+    height: 15rem;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    height: 45rem;
+    padding: 3rem 4rem;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.8s;
+    z-index: 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    background-image: linear-gradient(
+      to right,
+      rgba($color-black, 0.5),
+      transparent
+    );
+    transition: all 0.8s;
+
+    @media only screen and (min-width: 1200px) {
+      background-image: linear-gradient(
+        to top,
+        rgba($color-black, 0.5),
+        transparent
+      );
+    }
+  }
+
+  &:hover {
+    &::before {
+      transform: scale(1.05);
+    }
+
+    &::after {
+      background-color: rgba($color-white, 0.7);
+      background-image: unset;
+    }
+
+    & > .heading--card {
+      color: $color-black;
+      transition: all 0.8s;
+    }
+  }
+
+  &--1 {
+    &::before {
+      background-image: url("../images/mobile/image-deep-earth.jpg");
+
+      @media only screen and (min-width: 1200px) {
+        background-image: url("../images/desktop/image-deep-earth.jpg");
+      }
+    }
+  }
+
+  &--2 {
+    &::before {
+      background-image: url("../images/mobile/image-night-arcade.jpg");
+
+      @media only screen and (min-width: 1200px) {
+        background-image: url("../images/desktop/image-night-arcade.jpg");
+      }
+    }
+  }
+
+  &--3 {
+    &::before {
+      background-image: url("../images/mobile/image-soccer-team.jpg");
+
+      @media only screen and (min-width: 1200px) {
+        background-image: url("../images/desktop/image-soccer-team.jpg");
+      }
+    }
+  }
+
+  &--4 {
+    &::before {
+      background-image: url("../images/mobile/image-grid.jpg");
+
+      @media only screen and (min-width: 1200px) {
+        background-image: url("../images/desktop/image-grid.jpg");
+      }
+    }
+  }
+
+  &--5 {
+    &::before {
+      background-image: url("../images/mobile/image-from-above.jpg");
+
+      @media only screen and (min-width: 1200px) {
+        background-image: url("../images/desktop/image-from-above.jpg");
+      }
+    }
+  }
+
+  &--6 {
+    &::before {
+      background-image: url("../images/mobile/image-pocket-borealis.jpg");
+
+      @media only screen and (min-width: 1200px) {
+        background-image: url("../images/desktop/image-pocket-borealis.jpg");
+      }
+    }
+  }
+
+  &--7 {
+    &::before {
+      background-image: url("../images/mobile/image-curiosity.jpg");
+
+      @media only screen and (min-width: 1200px) {
+        background-image: url("../images/desktop/image-curiosity.jpg");
+      }
+    }
+  }
+
+  &--8 {
+    &::before {
+      background-image: url("../images/mobile/image-fisheye.jpg");
+
+      @media only screen and (min-width: 1200px) {
+        background-image: url("../images/desktop/image-fisheye.jpg");
+      }
+    }
+  }
+}
